@@ -23,6 +23,7 @@ export const enemiesDisplayer = async (enemies: Enemy[]) => {
         enemyDiv.style.borderRadius = "8px";
         enemyDiv.style.border = "1px solid #fff";
         container.appendChild(enemyDiv);
+        enemyDiv.style.transition = `left ${enemy.speed}s linear, top ${enemy.speed}s linear`;
     });
 
     // Ajouter le container au DOM (par exemple dans #game-container)
