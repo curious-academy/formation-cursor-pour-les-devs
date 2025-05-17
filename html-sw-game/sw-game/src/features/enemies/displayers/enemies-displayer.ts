@@ -1,5 +1,10 @@
 import type { Enemy } from "../models/enemy";
 
+/**
+ * Quoi : Affiche dynamiquement une liste d'ennemis dans le DOM.
+ * Comment : Génère un conteneur et une div pour chaque ennemi, positionnés aléatoirement dans une zone de 400x400px, puis ajoute le tout dans #game-container.
+ * Pourquoi : Permet de visualiser les ennemis du jeu de façon interactive et dynamique, en tenant compte de leur état et de leur vitesse.
+ */
 export const enemiesDisplayer = async (enemies: Enemy[]) => {
 
     // On va générer une liste de divs pour chaque ennemi avec une position aléatoire
