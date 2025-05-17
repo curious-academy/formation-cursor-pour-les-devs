@@ -1,0 +1,15 @@
+---
+description: 
+globs: *.ts
+alwaysApply: false
+---
+Général :
+- Comentaire le plus précis. Format utilisé : Quoi / Comment / Pourquoi
+
+Classes and Interfaces:
+- les commentaires sont au format JSDoc
+
+Functions and Methods:
+- seules les méthodes publiques et protected sont à commenter
+
+- aucun commentaire dans le corps d'une méthode
