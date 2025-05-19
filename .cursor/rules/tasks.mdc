@@ -12,4 +12,4 @@ alwaysApply: true
 [x] - tache 05 - extraire la génération de position aléatoire dans une fonction utilitaire
 [x] - tache 06 - typer explicitement les erreurs dans les catch (catch (e: unknown))
 [ ] - tache 07 - renommer les tests en anglais (optionnel)
-[ ] - tache 08 - atteindre un code coverage de 90% minimum sur le projet
+[x] - tache 08 - atteindre un code coverage de 90% minimum sur le projet
