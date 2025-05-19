@@ -5,6 +5,11 @@ alwaysApply: true
 ---
 [x]- tache 01 : créer la classe qui gère les parties
 
-
-
 [x] - tache 02 - permettre de quitter une partie et de relancer la partie plus tard.
+
+[x] - tache 03 - centraliser les constantes magiques (gravité, taille de la zone de jeu) dans un fichier config.ts
+[x] - tache 04 - factoriser la gestion du localStorage avec des helpers génériques
+[x] - tache 05 - extraire la génération de position aléatoire dans une fonction utilitaire
+[x] - tache 06 - typer explicitement les erreurs dans les catch (catch (e: unknown))
+[ ] - tache 07 - renommer les tests en anglais (optionnel)
+[ ] - tache 08 - atteindre un code coverage de 90% minimum sur le projet

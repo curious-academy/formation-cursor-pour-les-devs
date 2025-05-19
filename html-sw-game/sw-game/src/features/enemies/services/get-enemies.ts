@@ -5,20 +5,32 @@ export class GetAllEnemies {
         return await new Promise<Enemy[]>(resolve => {
             setTimeout(() => {
                 const array: Enemy[] = [
-                   { 
+                   {
                     id: 1,
                     firstName: "Darth",
-                    lifePoint: { current: 100, max: 100 }
+                    lifePoint: { current: 100, max: 100 },
+                    speed: 1,
+                    position: { x: 0, y: 0 },
+                    direction: { x: 1, y: 0 },
+                    isMoving: false
                    },
-                   { 
+                   {
                     id: 2,
                     firstName: "Darth",
-                    lifePoint: { current: 100, max: 100 }
-                   },   
-                   { 
+                    lifePoint: { current: 100, max: 100 },
+                    speed: 1,
+                    position: { x: 0, y: 0 },
+                    direction: { x: 1, y: 0 },
+                    isMoving: false
+                   },
+                   {
                     id: 3,
                     firstName: "Darth",
-                    lifePoint: { current: 100, max: 100 }
+                    lifePoint: { current: 100, max: 100 },
+                    speed: 1,
+                    position: { x: 0, y: 0 },
+                    direction: { x: 1, y: 0 },
+                    isMoving: false
                    }
                 ]
 
