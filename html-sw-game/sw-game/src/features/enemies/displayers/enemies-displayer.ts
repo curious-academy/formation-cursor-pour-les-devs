@@ -1,4 +1,5 @@
 import type { Enemy } from "../models/enemy";
+import { GAME_AREA_SIZE } from '../../../config';
 
 /**
  * Quoi : Affiche dynamiquement une liste d'ennemis dans le DOM.
@@ -12,14 +13,17 @@ export const enemiesDisplayer = async (enemies: Enemy[]) => {
     container.id = "enemies-container";
     container.style.position = "relative";
 
+    function getRandomPosition(maxX: number, maxY: number): { x: number, y: number } {
+        return { x: Math.floor(Math.random() * maxX), y: Math.floor(Math.random() * maxY) };
+    }
+
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
         enemyDiv.className = "enemy";
         enemyDiv.innerText = `${enemy.firstName} (${enemy.lifePoint.current}/${enemy.lifePoint.max})`;
         enemyDiv.style.position = "absolute";
         // Générer des positions aléatoires dans une zone de 400x400px
-        const x = Math.floor(Math.random() * 400);
-        const y = Math.floor(Math.random() * 400);
+        const { x, y } = getRandomPosition(GAME_AREA_SIZE, GAME_AREA_SIZE);
         enemyDiv.style.left = `${x}px`;
         enemyDiv.style.top = `${y}px`;
         enemyDiv.style.padding = "8px";

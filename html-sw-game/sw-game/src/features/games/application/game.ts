@@ -43,7 +43,7 @@ export class Game {
      */
     public save(): void {
         if (this.state) {
-            localStorage.setItem(Game.STORAGE_KEY, JSON.stringify(this.state));
+            saveToStorage(Game.STORAGE_KEY, this.state);
         }
     }
 
@@ -53,15 +53,11 @@ export class Game {
      * Pourquoi : Permet de reprendre une partie sauvegardée.
      */
     public load(): GameState | null {
-        const data = localStorage.getItem(Game.STORAGE_KEY);
-        if (data) {
-            try {
-                return JSON.parse(data) as GameState;
-            } catch {
-                return null;
-            }
+        try {
+            return loadFromStorage<GameState>(Game.STORAGE_KEY);
+        } catch (e: unknown) {
+            return null;
         }
-        return null;
     }
 
     /**
@@ -86,4 +82,13 @@ export class Game {
             await this.displayEnemies(this.state.enemies);
         }
     }
+}
+
+function saveToStorage<T>(key: string, value: T): void {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+function loadFromStorage<T>(key: string): T | null {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) as T : null;
 }

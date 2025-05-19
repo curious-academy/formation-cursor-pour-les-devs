@@ -1,4 +1,5 @@
 import type { Enemy } from "../models/enemy";
+import { GRAVITY } from '../../../config';
 
 // Ce fichier contient la logique de déplacement des ennemis dans le jeu.
 // La classe MoveEnemyService fournit une méthode pour mettre à jour la position d'un ennemi
@@ -30,7 +31,7 @@ export class MoveEnemyService {
         let newVerticalSpeed = enemy.verticalSpeed ?? 0;
         let isJumping = enemy.isJumping ?? false;
 
-        const gravity = 9.8; // pixels/s² ou unité adaptée à ton jeu
+        const gravity = GRAVITY; // pixels/s² ou unité adaptée à ton jeu
 
         if (isJumping) {
             // Appliquer la gravité
