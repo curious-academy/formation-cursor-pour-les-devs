@@ -6,4 +6,5 @@ alwaysApply: true
 [x]- tache 01 : créer la classe qui gère les parties
 
 
-[ ] - tache 02 - permettre de quitter une partie et de relancer la partie plus tard.
+
+[x] - tache 02 - permettre de quitter une partie et de relancer la partie plus tard.
